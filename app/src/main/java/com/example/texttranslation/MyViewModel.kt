@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 
 class MyViewModel : ViewModel()  {
-    var translator : Translator? = null
+    private var translator : Translator? = null
 
     private val _translatedText = MutableStateFlow<String?>(null)
     val translatedText: StateFlow<String?> = _translatedText
@@ -19,7 +19,7 @@ class MyViewModel : ViewModel()  {
     private val _sourceLanguage = MutableStateFlow(TranslateLanguage.ENGLISH)
     val sourceLanguage: StateFlow<String> = _sourceLanguage
 
-    private val _targetLanguage = MutableStateFlow(TranslateLanguage.SPANISH)
+    private val _targetLanguage = MutableStateFlow(TranslateLanguage.FRENCH)
     val targetLanguage: StateFlow<String> = _targetLanguage
 
     private val _isDownloading = MutableStateFlow(false)
